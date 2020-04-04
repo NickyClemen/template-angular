@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  opacity: .8;
+  padding: 10px;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#f4f4f4;
+}
+
+.font-bold {
+  font-weight: bold;
+  color: #3a3535;
+}
