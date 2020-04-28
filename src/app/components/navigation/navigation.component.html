@@ -1,14 +1,31 @@
-<nav>
-  <ul class="list-nav">
-    <li><a href="#" class="link-b">¿Quienes somos</a></li>
-    <li><a href="#" class="link-b" id="pregunta">Preguntas frecuentes</a></li>
-    <li class="menu-desplegable-a">
-      <ul class="menu-desplegable-b">
-        <li class="list"><a href="#" class="link-b">Medios de pago</a></li>
-          <li class="list"><a href="#" class="link-b">Catálogo</a></li>
-          <li class="list"><a href="#" class="link-b">Disclaimer</a></li>
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegationCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navegationCollapse">
+      <ul class="navbar-nav">
+        <li class="navbar-item mr-3">
+          <a routerLink="/" class="navbar-link text-dark font-weight-bold text-decoration-none">Inicio</a>
+        </li>
+        <li class="navbar-item mr-3 dropdown">
+          <a routerLink="/productos" class="navbar-link dropdown-toogle text-dark font-weight-bold text-decoration-none" id="dropProductos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+          <div class="dropdown-menu" aria-labelledby="dropProductos">
+            <a class="dropdown-item" href="#">Living</a>
+            <a class="dropdown-item" href="#">Dormitorio</a>
+            <a class="dropdown-item" href="#">Cocina - Comedor</a>
+            <a class="dropdown-item" href="#">Escritorios</a>
+            <a class="dropdown-item" href="#">Colores</a>
+            <a class="dropdown-item" href="#">Lamparas</a>
+          </div>
+        </li>
+        <li class="navbar-item mr-3">
+          <a routerLink="/preguntas-frecuentes" class="navbar-link text-dark font-weight-bold text-decoration-none">Preguntas frecuentes</a>
+        </li>
+        <li class="navbar-item">
+          <a routerLink="/contacto" class="navbar-link text-dark font-weight-bold text-decoration-none">Contacto</a>
+        </li>
       </ul>
-    </li>
-    <li><a href="#" class="link-b">Contacto</a></li>
-  </ul>
-</nav>
+    </div>
+  </nav>
+</div>

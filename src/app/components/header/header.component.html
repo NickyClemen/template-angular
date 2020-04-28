@@ -1,25 +1,22 @@
-<header>
-  <section class="header-login">
-    <a routerLink="/register" class="link-a">
-      <fa-icon [icon]="faUser"></fa-icon>  Crear cuenta
-    </a>
-    <a routerLink="/login" class="link-a">
-      <fa-icon [icon]="faUserCircle"></fa-icon>  Iniciar sesión
-    </a>
-    <a href="#" class="link-a">
-      <fa-icon [icon]="faSignOutAlt"></fa-icon>  Cerrar sesión
-    </a>
-  </section>
+<header class="container-fluid bg-dark py-4 px-4">
+  <app-contact-header></app-contact-header>
 
-  <section class="header-section">
-    <div class="header-img-container">
-      <img class="img-container" src="../assets/img/220px-Logos.png" alt="">
+  <div class="row">
+    <div class="col d-flex justify-content-center align-items-center">
+      <div class="">
+        <img class="img-fluid img-size pr-3" src="../assets/img/sweet.png" alt="Sweet Home Logo">
+        <small class="text-light font-weight-bold">Sweet Home Muebles</small>
+      </div>
     </div>
 
-    <app-search></app-search>
-  </section>
+    <div class="col d-flex justify-content-center align-items-center">
+      <app-search></app-search>
+    </div>
 
-
+    <div class="col  d-flex justify-content-center align-items-center">
+      <small class="text-light">0 items / $0,00</small><app-carrito></app-carrito>
+    </div>
+  </div>
 </header>
 
 
