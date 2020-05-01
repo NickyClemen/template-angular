@@ -24,6 +24,9 @@ import { FormComponent } from './components/contact/form/form.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { CarritoComponent } from './components/header/carrito/carrito.component';
 import { DestacadosComponent } from './components/main/destacados/destacados.component';
+import { CategoriasComponent } from './components/productos/categorias/categorias.component';
+import { OrdenarComponent } from './components/productos/ordenar/ordenar.component';
+import { CardProductoComponent } from './components/productos/card-producto/card-producto.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { DestacadosComponent } from './components/main/destacados/destacados.com
     CopyrightComponent,
     CarritoComponent,
     DestacadosComponent,
+    CategoriasComponent,
+    OrdenarComponent,
+    CardProductoComponent,
   ],
   imports: [
     BrowserModule,
