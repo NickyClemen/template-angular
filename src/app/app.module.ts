@@ -24,6 +24,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { FormComponent } from './components/contact/form/form.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { CarritoComponent } from './components/header/carrito/carrito.component';
+import { DestacadosComponent } from './components/main/destacados/destacados.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CarritoComponent } from './components/header/carrito/carrito.component'
     FormComponent,
     CopyrightComponent,
     CarritoComponent,
+    DestacadosComponent,
   ],
   imports: [
     BrowserModule,
