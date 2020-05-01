@@ -27,6 +27,12 @@ import { DestacadosComponent } from './components/main/destacados/destacados.com
 import { CategoriasComponent } from './components/productos/categorias/categorias.component';
 import { OrdenarComponent } from './components/productos/ordenar/ordenar.component';
 import { CardProductoComponent } from './components/productos/card-producto/card-producto.component';
+import { ProductoComponent } from './components/productos/producto/producto.component';
+import { ImagenProductoComponent } from './components/productos/producto/imagen-producto/imagen-producto.component';
+import { SliderProductoComponent } from './components/productos/producto/slider-producto/slider-producto.component';
+import { HeaderProductoComponent } from './components/productos/producto/header-producto/header-producto.component';
+import { DetallesProductoComponent } from './components/productos/producto/detalles-producto/detalles-producto.component';
+import { ProductosRelacionadosComponent } from './components/productos/producto/productos-relacionados/productos-relacionados.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +58,12 @@ import { CardProductoComponent } from './components/productos/card-producto/card
     CategoriasComponent,
     OrdenarComponent,
     CardProductoComponent,
+    ProductoComponent,
+    ImagenProductoComponent,
+    SliderProductoComponent,
+    HeaderProductoComponent,
+    DetallesProductoComponent,
+    ProductosRelacionadosComponent,
   ],
   imports: [
     BrowserModule,
