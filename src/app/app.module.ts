@@ -11,7 +11,6 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/main/carousel/carousel.component';
 import { MainComponent } from './components/main/main.component';
-import { MainSectionComponent } from './components/main/main-section/main-section.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchComponent } from './components/header/search/search.component';
@@ -34,7 +33,6 @@ import { DestacadosComponent } from './components/main/destacados/destacados.com
     FooterComponent,
     CarouselComponent,
     MainComponent,
-    MainSectionComponent,
     LoginComponent,
     RegisterComponent,
     SearchComponent,
