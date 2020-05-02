@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+
+import { FetchDataService } from './services/fetch-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -71,9 +74,10 @@ import { InputCantidadComponent } from './components/productos/producto/input-ca
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FlashMessagesModule
+    FlashMessagesModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [FetchDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

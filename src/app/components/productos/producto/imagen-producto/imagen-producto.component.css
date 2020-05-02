@@ -1,0 +1,11 @@
+.imgContainer {
+  overflow: hidden;
+}
+
+.zoomImg {
+  transition: transform .2s; /* Animation */
+}
+
+.zoomImg:hover {
+  transform: scale(1.5);
+}

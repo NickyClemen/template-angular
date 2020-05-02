@@ -1,12 +1,11 @@
 <div class="col-md-4 mt-4">
-  <div class="card" style="cursor:pointer;" (click)="redirect()">
+  <div class="card"
+    style="cursor:pointer;" (click)="redirect()"
+    *ngFor="let producto of productos; let i"
+  >
     <div class="card-body">
-      <h4 class="card-title">Texto de prueba</h4>
-      <p class="card-text">Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Fuga ratione,
-        nesciunt, blanditiis iure odit mollitia,
-        quasi id sit ipsam obcaecati eligendi! Illo excepturi
-        quod aut nemo expedita voluptas non eaque.</p>
+      <h4 class="card-title">{{ producto[i].titulo }}</h4>
+      <p class="card-text">{{ producto[i].descripcion }}</p>
     </div>
   </div>
 </div>

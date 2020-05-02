@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Cómoda Provenzal Doble",
+    "precio": 22130.00,
+    "descripcion": "Medidas: 160*90*40. Materiales: pino y mdf. Cajones con guías metálicas",
+    "imagen": "img1.jpg"
+  },
+  {
+    "titulo": "Cómoda Veneciana",
+    "precio": 22560.00,
+    "descripcion": "Medidas: 160*90*40. Materiales: pino y mdf. Cajones con guías metálica",
+    "imagen": "img2.jpg"
+  },
+  {
+    "titulo": "Cómoda Abril Grande",
+    "precio": 28300.00,
+    "descripcion": "Medidas: 160*90*40. Materiales: pino y mdf. Cajones con guías metálicas",
+    "imagen": "img3.jpg"
+  }
+]
