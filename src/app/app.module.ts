@@ -33,6 +33,7 @@ import { SliderProductoComponent } from './components/productos/producto/slider-
 import { HeaderProductoComponent } from './components/productos/producto/header-producto/header-producto.component';
 import { DetallesProductoComponent } from './components/productos/producto/detalles-producto/detalles-producto.component';
 import { ProductosRelacionadosComponent } from './components/productos/producto/productos-relacionados/productos-relacionados.component';
+import { InputCantidadComponent } from './components/productos/producto/input-cantidad/input-cantidad.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { ProductosRelacionadosComponent } from './components/productos/producto/
     HeaderProductoComponent,
     DetallesProductoComponent,
     ProductosRelacionadosComponent,
+    InputCantidadComponent,
   ],
   imports: [
     BrowserModule,
