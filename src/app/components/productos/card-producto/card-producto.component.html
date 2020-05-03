@@ -1,11 +1,16 @@
-<div class="col-md-4 mt-4">
-  <div class="card"
+<div class="card-deck mt-3">
+  <div
+    class="card"
     style="cursor:pointer;" (click)="redirect()"
-    *ngFor="let producto of productos; let i"
+    *ngFor="let producto of productos;"
   >
     <div class="card-body">
-      <h4 class="card-title">{{ producto[i].titulo }}</h4>
-      <p class="card-text">{{ producto[i].descripcion }}</p>
+      <img src="../../../../../../assets/img/{{ producto.imagen }}" class="card-img-top" alt="...">
+      <h4 class="card-title mt-3">{{ producto.titulo }}</h4>
+      <p class="card-text font-weight-bold text-primary">${{ producto.precio }}</p>
+      <p class="card-text">{{ producto.descripcion }}</p>
     </div>
   </div>
 </div>
+
+
