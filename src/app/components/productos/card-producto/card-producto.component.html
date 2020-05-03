@@ -1,7 +1,7 @@
 <div class="card-deck mt-3">
   <div
     class="card"
-    style="cursor:pointer;" (click)="redirect()"
+    style="cursor:pointer;" (click)="redirect($event)"
     *ngFor="let producto of productos;"
   >
     <div class="card-body">

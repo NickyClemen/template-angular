@@ -1,12 +1,8 @@
 export class Producto {
   constructor(
+    private id: number,
     private titulo: string,
     private precio: number,
     private descripcion: string,
-    private imagen: string) {
-    this.titulo = titulo;
-    this.precio = precio;
-    this.descripcion = descripcion;
-    this.imagen = imagen;
-  }
+    private imagen: string) {}
 }
