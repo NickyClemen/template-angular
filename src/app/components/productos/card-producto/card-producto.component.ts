@@ -11,7 +11,7 @@ import { Producto } from '../../../models/producto.model';
   styleUrls: ['./card-producto.component.css']
 })
 export class CardProductoComponent implements OnInit {
-  public productos: Producto[] = [];
+  public productos: string[] = [];
 
   constructor(private routes: Router, private xhr: FetchDataService) { }
 
@@ -19,12 +19,11 @@ export class CardProductoComponent implements OnInit {
     this.xhr.getResult()
       .subscribe(
         response => {
-          for(const key in response) {
+          for(let key in response) {
             if(response[key] !== '') {
               this.productos.push(response[key]);
             }
           }
-          return this.productos;
         },
         error => console.error(error.message)
         );

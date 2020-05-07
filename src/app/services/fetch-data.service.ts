@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class FetchDataService {
 
-  private URL = '../../assets/object/muebles.json';
+  private URL = 'http://localhost:8080/shmuebles/muebles';
 
   constructor(private httpClient: HttpClient) { }
 

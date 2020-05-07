@@ -5,8 +5,8 @@
     *ngFor="let producto of productos;"
   >
     <div class="card-body">
-      <img src="../../../../../../assets/img/{{ producto.imagen }}" class="card-img-top" alt="...">
-      <h4 class="card-title mt-3">{{ producto.titulo }}</h4>
+      <!-- <img src="../../../../../../assets/img/{{ producto.imagen }}" class="card-img-top" alt="..."> -->
+      <h4 class="card-title mt-3">{{ producto.nombre }}</h4>
       <p class="card-text font-weight-bold text-primary">${{ producto.precio }}</p>
       <p class="card-text">{{ producto.descripcion }}</p>
     </div>
