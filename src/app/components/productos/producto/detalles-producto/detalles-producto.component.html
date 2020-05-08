@@ -1,10 +1,15 @@
 <div class="col ml-5">
   <h3>{{ producto.nombre }}</h3>
-  <p>${{ producto.precio }}</p>
+  <p>{{ producto.precio }}</p>
 
   <app-input-cantidad></app-input-cantidad>
 
   <p class="text-center"><small>COMPARTIR</small></p>
 
+  <p>Medidas: {{ producto.ancho }}*{{ producto.alto }}*{{ producto.profundo }}</p>
+  <p>Materiales: {{ producto.material }}</p>
+  <p>Colores: {{ producto.colores }}</p>
+  <p>{{ producto.colorAdicional }}</p>
   <p>{{ producto.descripcion }}</p>
+  <p>{{ producto.aPedido }}</p>
 </div>
