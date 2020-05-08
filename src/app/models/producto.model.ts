@@ -1,17 +1,17 @@
 export class Producto {
-  private id: number;
-  private nombre: string;
-  private categoria: string;
-  private subCategoria?: string;
-  private precio: number;
-  private ancho: number;
-  private alto: number;
-  private profundo: number;
-  private material: string;
-  private colores: string;
-  private colorAdicional?: string;
-  private descripcion: string;
-  private aPedido: string;
+  public id: number;
+  public nombre: string;
+  public categoria: string;
+  public subCategoria?: string;
+  public precio: number;
+  public ancho: number;
+  public alto: number;
+  public profundo: number;
+  public material: string;
+  public colores: string;
+  public colorAdicional?: string;
+  public descripcion: string;
+  public aPedido: string;
 
   constructor() {}
 }

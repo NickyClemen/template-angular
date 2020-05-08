@@ -11,7 +11,7 @@ import { Producto } from '../../../models/producto.model';
   styleUrls: ['./card-producto.component.css']
 })
 export class CardProductoComponent implements OnInit {
-  public productos: string[] = [];
+  public productos: Producto[] = [];
 
   constructor(private routes: Router, private xhr: FetchDataService) { }
 
@@ -20,16 +20,18 @@ export class CardProductoComponent implements OnInit {
       .subscribe(
         response => {
           for(let key in response) {
-            if(response[key] !== '') {
+            if(response[key] !== null) {
               this.productos.push(response[key]);
             }
           }
+
+          return this.productos;
         },
         error => console.error(error.message)
-        );
-      }
+      );
+  }
 
-      redirect(e) {
-        this.routes.navigate(['/producto']);
-      }
+  redirect(id) {
+    this.routes.navigate(['productos', id]);
+  }
 }

@@ -1,12 +1,10 @@
 <div class="col ml-5">
-  <h3>Testo de prueba</h3>
-  <p>$1000</p>
+  <h3>{{ producto.nombre }}</h3>
+  <p>${{ producto.precio }}</p>
 
   <app-input-cantidad></app-input-cantidad>
 
   <p class="text-center"><small>COMPARTIR</small></p>
 
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate libero eligendi impedit repellat dolorum consequatur, quae, commodi aut at corrupti iusto exercitationem autem a, quibusdam nulla tenetur mollitia obcaecati.
-  </p>
+  <p>{{ producto.descripcion }}</p>
 </div>
