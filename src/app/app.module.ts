@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { FetchDataService } from './services/fetch-data.service';
+import { HelpersService } from './services/helpers.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -77,7 +78,10 @@ import { InputCantidadComponent } from './components/productos/producto/input-ca
     FlashMessagesModule,
     HttpClientModule,
   ],
-  providers: [FetchDataService],
+  providers: [
+    FetchDataService,
+    HelpersService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

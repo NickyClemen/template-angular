@@ -1,24 +1,41 @@
-import { Component, OnInit, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FetchDataService } from '../../services/fetch-data.service';
 import { Producto } from '../../models/producto.model';
 
 import { ActivatedRoute } from '@angular/router';
+
+import { HelpersService } from '../../services/helpers.service';
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
-export class ProductosComponent implements OnInit, OnChanges {
+export class ProductosComponent implements OnInit {
   public productos: Producto[] = [];
-  public productosCategoria: Producto[] = [];
   public categoria: string;
 
   constructor(private xhr: FetchDataService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.activatedRoute.paramMap
-      .subscribe(response => this.categoria = response.get('categoria'));
+      .subscribe(response => {
+        this.categoria = response.get('categoria');
+
+        this.xhr.getByCategory(this.categoria)
+          .subscribe(producto => {
+
+            HelpersService.cleanArray(this.productos);
+
+            for(let key in producto) {
+              if(producto[key] !== null) {
+                this.productos.push(producto[key]);
+              }
+            }
+
+            return this.productos;
+          });
+      });
 
     this.xhr.getResult()
       .subscribe(
@@ -33,28 +50,5 @@ export class ProductosComponent implements OnInit, OnChanges {
         },
         error => console.error(error.message)
       );
-
-    if(this.categoria !== '') {
-      this.findByCategory(this.categoria);
-    }
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if(changes.categoria.previousValue) {
-      this.findByCategory(this.categoria);
-    }
-  }
-
-  public findByCategory(category: string) {
-    this.xhr.getByCategory(category)
-      .subscribe(producto => {
-        for(let key in producto) {
-          if(producto[key] !== null) {
-            this.productosCategoria.push(producto[key]);
-          }
-        }
-
-        return this.productosCategoria;
-      });
   }
 }
