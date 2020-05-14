@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { FetchDataService } from 'src/app/services/fetch-data.service';
 import { Producto } from 'src/app/models/producto.model';
 
@@ -18,6 +18,7 @@ export class DetallesProductoComponent implements OnInit {
     ancho: 0,
     alto: 0,
     profundo: 0,
+    otrasMedidas: '',
     material: '',
     colores: '',
     colorAdicional: '',
@@ -25,10 +26,9 @@ export class DetallesProductoComponent implements OnInit {
     aPedido: ''
   };
 
-  id = 0;
+  public id: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, private fetchData: FetchDataService,
-              /* private route: Route */) {
+  constructor(private activatedRoute: ActivatedRoute, private fetchData: FetchDataService) {
   }
 
   ngOnInit() {
@@ -36,10 +36,8 @@ export class DetallesProductoComponent implements OnInit {
     this.fetchData.getById(this.id).subscribe(
       producto => {
         this.producto = producto;
-        console.log(this.producto);
-        return producto;
+        return this.producto;
       }
     );
   }
-
 }

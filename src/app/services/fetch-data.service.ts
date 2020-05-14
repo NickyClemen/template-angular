@@ -6,20 +6,26 @@ import { Producto } from '../models/producto.model';
 
 @Injectable()
 export class FetchDataService {
-  productos: Observable<Producto[]>;
-  producto: Observable<Producto>;
-
   private URL = 'http://localhost:8080/shmuebles/muebles';
+
+  public productos: Observable<Producto[]>;
+  public producto: Observable<Producto>;
+  public categoria: Observable<Producto[]>;
 
   constructor(private httpClient: HttpClient) { }
 
-  getResult(): Observable<Producto[]> {
+  public getResult(): Observable<Producto[]> {
     this.productos = this.httpClient.get<Producto[]>(this.URL);
     return this.productos;
   }
 
-  getById(id: number): Observable<Producto> {
+  public getById(id: number): Observable<Producto> {
     this.producto = this.httpClient.get<Producto>(`${ this.URL }/${ id }`);
     return this.producto;
+  }
+
+  public getByCategory(category: string): Observable<Producto[]> {
+    this.categoria = this.httpClient.get<Producto[]>(`${ this.URL }/categorias/${ category }`);
+    return this.categoria;
   }
 }

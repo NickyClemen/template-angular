@@ -1,11 +1,13 @@
-<h3>Categorías</h3>
-<div class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item"><a href="#" class="nav-link text-decoration-none text-dark">LIVING</a></li>
-    <li class="nav-item"><a href="#" class="nav-link text-decoration-none text-dark">DORMITORIO</a></li>
-    <li class="nav-item"><a href="#" class="nav-link text-decoration-none text-dark">COCINA COMEDOR</a></li>
-    <li class="nav-item"><a href="#" class="nav-link text-decoration-none text-dark">ESCRITORIOS</a></li>
-  </ul>
+<div class="col-md-3">
+  <h3>Categorías</h3>
+  <div class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngFor="let categoria of categorias">
+        <a [routerLink]="['/productos/categorias', categoria]" class="nav-link text-decoration-none text-dark">{{ categoria }}</a>
+      </li>
+    </ul>
+  </div>
 </div>
+
 
 

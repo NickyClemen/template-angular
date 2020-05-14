@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'preguntas-frecuentes', component: PreguntasComponent },
   { path: 'productos', component: ProductosComponent },
   { path: 'productos/:id', component: ProductoComponent },
+  { path: 'productos/categorias/:categoria', component: ProductosComponent },
 ];
 
 @NgModule({

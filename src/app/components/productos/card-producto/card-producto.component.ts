@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { FetchDataService } from '../../../services/fetch-data.service';
 
 import { Producto } from '../../../models/producto.model';
 
@@ -11,25 +9,11 @@ import { Producto } from '../../../models/producto.model';
   styleUrls: ['./card-producto.component.css']
 })
 export class CardProductoComponent implements OnInit {
+  @Input('productos')
   public productos: Producto[] = [];
+  constructor(private routes: Router) {}
 
-  constructor(private routes: Router, private xhr: FetchDataService) { }
-
-  ngOnInit() {
-    this.xhr.getResult()
-      .subscribe(
-        response => {
-          for(let key in response) {
-            if(response[key] !== null) {
-              this.productos.push(response[key]);
-            }
-          }
-
-          return this.productos;
-        },
-        error => console.error(error.message)
-      );
-  }
+  ngOnInit() {}
 
   redirect(id) {
     this.routes.navigate(['productos', id]);

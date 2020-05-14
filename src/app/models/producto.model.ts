@@ -7,6 +7,7 @@ export class Producto {
   public ancho: number;
   public alto: number;
   public profundo: number;
+  public otrasMedidas: string;
   public material: string;
   public colores: string;
   public colorAdicional?: string;

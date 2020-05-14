@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ordenar.component.css']
 })
 export class OrdenarComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
