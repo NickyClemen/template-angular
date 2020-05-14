@@ -6,7 +6,7 @@ import { Producto } from '../models/producto.model';
 
 @Injectable()
 export class FetchDataService {
-  private URL = 'http://localhost:8080/shmuebles/muebles';
+  private URL = 'https://shmuebles.herokuapp.com/shmuebles/muebles';
 
   public productos: Observable<Producto[]>;
   public producto: Observable<Producto>;
