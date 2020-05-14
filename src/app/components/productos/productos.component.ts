@@ -40,7 +40,7 @@ export class ProductosComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if(changes.categoria.currentValue) {
+    if(changes.categoria.previousValue) {
       this.findByCategory(this.categoria);
     }
   }
@@ -53,7 +53,7 @@ export class ProductosComponent implements OnInit, OnChanges {
             this.productosCategoria.push(producto[key]);
           }
         }
-        
+
         return this.productosCategoria;
       });
   }
