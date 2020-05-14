@@ -53,7 +53,7 @@ export class ProductosComponent implements OnInit, OnChanges {
             this.productosCategoria.push(producto[key]);
           }
         }
-        console.log(this.productosCategoria);
+        
         return this.productosCategoria;
       });
   }
