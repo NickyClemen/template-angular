@@ -32,7 +32,7 @@ export class ProductosComponent implements OnInit {
                 this.productos.push(producto[key]);
               }
             }
-
+            
             return this.productos;
           });
       });

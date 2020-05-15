@@ -1,22 +1,27 @@
-<form action="" class="mx-5">
+<form #form="ngForm" class="mx-5">
   <div class="form-group">
-    <label for="" class="font-weight-bold text-light">Nombre</label>
-    <input type="text" class="form-control" placeholder="Nombre" required>
+    <label for="nombre" class="font-weight-bold text-light">Nombre</label>
+    <input type="text" name="nombre" class="form-control" placeholder="Nombre" [(ngModel)]="formulario.nombre" required>
   </div>
   <div class="form-group text-light">
-    <label for="" class="font-weight-bold text-light">Apellido</label>
-    <input type="text" class="form-control" placeholder="Apellido" required>
+    <label for="apellido" class="font-weight-bold text-light">Apellido</label>
+    <input type="text" name="apellido" class="form-control" placeholder="Apellido" [(ngModel)]="formulario.apellido" required>
   </div>
 
   <div class="form-group">
-    <label for="" class="font-weight-bold text-light">Teléfono</label>
-    <input type="text" class="form-control" placeholder="Teléfono">
+    <label for="email" class="font-weight-bold text-light">Email</label>
+    <input type="email" name="email" class="form-control" [(ngModel)]="formulario.email" placeholder="Email">
   </div>
 
   <div class="form-group">
-    <label for="" class="font-weight-bold text-light">Mensaje</label>
-    <textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+    <label for="mensaje" class="font-weight-bold text-light">Teléfono</label>
+    <input type="text" name="mensaje" class="form-control" [(ngModel)]="formulario.telefono" placeholder="Teléfono">
   </div>
 
-  <input type="submit" name="" id="" class="btn btn-secondary btn-block" value="Enviar">
+  <div class="form-group">
+    <label for="mensaje" class="font-weight-bold text-light">Mensaje</label>
+    <textarea name="mensaje" class="form-control" [(ngModel)]="formulario.mensaje" cols="30" rows="10"></textarea>
+  </div>
+
+  <button role="button" (click)="sendForm()" class="btn btn-secondary btn-block">Enviar</button>
 </form>

@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from "@angular/forms";
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { FetchDataService } from './services/fetch-data.service';
 import { HelpersService } from './services/helpers.service';
+import { FormularioService } from './services/formulario.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -77,10 +79,12 @@ import { InputCantidadComponent } from './components/productos/producto/input-ca
     FontAwesomeModule,
     FlashMessagesModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [
     FetchDataService,
     HelpersService,
+    FormularioService,
   ],
   bootstrap: [AppComponent]
 })

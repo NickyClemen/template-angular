@@ -6,7 +6,7 @@ export class HelpersService {
     return (!Array.isArray(arr))
       ? arr
       : (arr.length > 0)
-      ? []
+      ? arr.splice(0, arr.length)
       : arr;
   }
 }
